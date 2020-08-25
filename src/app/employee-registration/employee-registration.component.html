@@ -1,0 +1,64 @@
+<div class="empreg-border">
+    <div class="empreg-title mt-2 ml-3">Employee Registration</div>
+    <form class="empreg-form container container-width">
+      <mat-form-field class="full-width">
+        <mat-label>Employee Name</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.empName" name="empName" #empName="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Employee Id</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.empId" name="empId" #empId="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Contact Number</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.contact" name="contact" #contact="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.email" name="email" #email="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Department</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.department" name="department" #department="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>HR</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.hr" name="hr" #hr="ngModel">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Line Manager</mat-label>
+        <input matInput placeholder="" [(ngModel)]="empreg.manager" name="manager" #manager="ngModel">
+      </mat-form-field>
+
+      <div class="mb-4">
+        <button class="btn btn-primary mr-4" data-toggle="modal" data-target="#exampleModal" (click)="submitEmployeeDetails()">Submit</button>
+        <button class="btn btn-primary" (click)="clearEmployeeDetails()">Cancel</button>
+      </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    Employee has been Registered successfully !
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>
+  </div>
